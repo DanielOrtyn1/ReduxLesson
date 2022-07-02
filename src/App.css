@@ -1,10 +1,21 @@
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.Cookie-logo {
+  background-image: url(https://orteil.dashnet.org/cookieclicker/img/perfectCookie.png);
+  background-size: 56px 56px;
+  width: 56px;
+  height: 56px;
+  background-color: black;
+  border: none;
+  outline: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -20,6 +31,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: black;
 }
 
 .App-link {
@@ -30,9 +42,11 @@
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(10px);
   }
+
   100% {
     transform: translateY(0px);
   }

@@ -1,9 +1,8 @@
 import { useState } from 'react';
-
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import {
   increment,
-  incrementByAmount,
+  alterByAmount,
   selectCount,
 } from './counterSlice';
 import styles from './Counter.module.css';
@@ -20,11 +19,10 @@ export function Counter() {
       <div className={styles.row}>
         <span className={styles.value}>{count}</span>
         <button
-          className={styles.button}
+          className="Cookie-logo"
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
         >
-          +
         </button>
       </div>
       <div className={styles.row}>
@@ -36,7 +34,7 @@ export function Counter() {
         />
         <button
           className={styles.button}
-          onClick={() => dispatch(incrementByAmount(incrementValue))}
+          onClick={() => dispatch(alterByAmount(incrementValue))}
         >
           Add Amount
         </button>

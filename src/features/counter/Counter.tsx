@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import {
   increment,
@@ -10,9 +10,17 @@ import styles from './Counter.module.css';
 export function Counter() {
   const count = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
-  const [incrementAmount, setIncrementAmount] = useState('2');
 
+  const [incrementAmount, setIncrementAmount] = useState('2');
   const incrementValue = Number(incrementAmount) || 0;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      dispatch(increment());
+    }, 333);
+    return () => clearInterval(interval);
+  }, []);
+
 
   return (
     <div>

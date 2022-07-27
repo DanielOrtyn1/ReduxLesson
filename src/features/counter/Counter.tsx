@@ -7,7 +7,7 @@ import {
 } from './counterSlice';
 import styles from './Counter.module.css';
 
-export function Counter() {
+export function Counter(props: any) {
   const count = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
 
